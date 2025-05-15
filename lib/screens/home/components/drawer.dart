@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:vjnucleus/utility/constants/colors.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -61,7 +60,7 @@ class MyDrawer extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.dashboard, color: Colors.black),
               title: Text(
-                'Test Reports',
+                'Test Results',
                 style: TextStyle(color: Colors.black),
               ),
               onTap:
@@ -99,6 +98,26 @@ class MyDrawer extends StatelessWidget {
                   () => {
                     Navigator.pop(context),
                     Navigator.pushNamed(context, '/testPapers'),
+                  },
+            ),
+
+            ListTile(
+              leading: Icon(Icons.dashboard, color: Colors.black),
+              title: Text('scoreboard', style: TextStyle(color: Colors.black)),
+              onTap:
+                  () => {
+                    Navigator.pop(context),
+                    Navigator.pushNamed(context, '/scoreboard'),
+                  },
+            ),
+
+            ListTile(
+              leading: Icon(Icons.dashboard, color: Colors.black),
+              title: Text('Add Session', style: TextStyle(color: Colors.black)),
+              onTap:
+                  () => {
+                    Navigator.pop(context),
+                    Navigator.pushNamed(context, '/session'),
                   },
             ),
 

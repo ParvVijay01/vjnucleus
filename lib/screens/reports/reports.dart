@@ -23,7 +23,7 @@ class _ReportsState extends State<Reports> {
           },
           icon: Icon(Icons.menu),
         ),
-        title: Text("Test Reports"),
+        title: Text("Tests List"),
       ),
       drawer: MyDrawer(),
       body: SingleChildScrollView(

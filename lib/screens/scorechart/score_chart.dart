@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:vjnucleus/screens/home/components/drawer.dart';
 import 'package:vjnucleus/screens/studyreport/components/study_sessiocn_chart.dart';
 
-class StudyReport extends StatefulWidget {
-  const StudyReport({super.key});
+class ScoreChart extends StatefulWidget {
+  const ScoreChart({super.key});
 
   @override
-  State<StudyReport> createState() => _StudyReportState();
+  State<ScoreChart> createState() => _ScoreChartState();
 }
 
-class _StudyReportState extends State<StudyReport> {
+class _ScoreChartState extends State<ScoreChart> {
   @override
   Widget build(BuildContext context) {
     GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        title: Text("Study Report"),
+        title: Text("Scoreboard"),
         automaticallyImplyLeading: false,
         leading: IconButton(
           onPressed: () {
@@ -29,17 +29,17 @@ class _StudyReportState extends State<StudyReport> {
       body: Column(
         children: [
           StudySessionsChart(
-            sessionHours: [5, 4, 6, 7, 3, 8],
+            sessionHours: [50, 40, 60, 70, 30, 80],
             sessionLabels: [
-              "Session 1",
-              "Session 2",
-              "Session 3",
-              "Session 4",
-              "Session 5",
-              "Session 6",
+              "Maths",
+              "Physics",
+              "Chemistry",
+              "Biology",
+              "History",
+              "Genral Knowledge",
             ],
-            title: 'Study Sessions',
-            maxY: 10,
+            title: 'Scoreboard',
+            maxY: 100,
           ),
         ],
       ),
