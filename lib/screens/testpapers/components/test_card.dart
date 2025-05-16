@@ -13,6 +13,7 @@ class TestCard extends StatelessWidget {
   final String time;
   final String duration;
   final bool isPremium;
+  
 
   const TestCard({
     super.key,
@@ -126,7 +127,7 @@ class TestCard extends StatelessWidget {
     );
   }
 
-  Widget _actionButton(String label, Color color) {
+  Widget _actionButton(String label, Color color, ) {
     return ElevatedButton(
       onPressed: () {},
       style: ElevatedButton.styleFrom(

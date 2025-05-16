@@ -4,7 +4,9 @@ import 'package:vjnucleus/screens/auth/login.dart';
 import 'package:vjnucleus/screens/home/home.dart';
 import 'package:vjnucleus/screens/mentorList/mentor.dart';
 import 'package:vjnucleus/screens/profile/profile.dart';
+import 'package:vjnucleus/screens/reattendTest/reattend_test.dart';
 import 'package:vjnucleus/screens/reports/reports.dart';
+import 'package:vjnucleus/screens/results/result_screen.dart';
 import 'package:vjnucleus/screens/scorechart/score_chart.dart';
 import 'package:vjnucleus/screens/studySesion/study_session.dart';
 import 'package:vjnucleus/screens/studyreport/study_report.dart';
@@ -21,6 +23,8 @@ class AppRoutes {
   static const String profile = '/profile';
   static const String report = '/report';
   static const String mentor = '/mentor';
+  static const String result = '/result';
+  static const String reattendTest = '/reattendTest';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -47,6 +51,12 @@ class AppRoutes {
 
       case report:
         return MaterialPageRoute(builder: (_) => Reports());
+
+      case result:
+        return MaterialPageRoute(builder: (_) => Results());
+
+      case reattendTest:
+        return MaterialPageRoute(builder: (_) => ReattendTest());
 
       case session:
         if (cameras != null) {

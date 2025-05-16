@@ -38,7 +38,9 @@ class _ReportsState extends State<Reports> {
               maxMarks: "360",
               startTime: "10:00 AM",
               endTime: "1:00 PM",
-              onViewResult: () {},
+              onViewResult: () {
+                Navigator.pushNamed(context, '/result');
+              },
             ),
             MockTestCard(
               title: "Jee Advanced Mock Test -3",

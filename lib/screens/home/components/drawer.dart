@@ -121,6 +121,19 @@ class MyDrawer extends StatelessWidget {
                   },
             ),
 
+            ListTile(
+              leading: Icon(Icons.dashboard, color: Colors.black),
+              title: Text(
+                'Reattend Test',
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap:
+                  () => {
+                    Navigator.pop(context),
+                    Navigator.pushNamed(context, '/reattendTest'),
+                  },
+            ),
+
             Spacer(), // Push logout button to the bottom
             Divider(
               color: Colors.black54,

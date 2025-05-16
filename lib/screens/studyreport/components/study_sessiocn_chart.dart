@@ -12,7 +12,7 @@ class StudySessionsChart extends StatelessWidget {
     required this.sessionHours,
     required this.sessionLabels,
     required this.title,
-    required this.maxY
+    required this.maxY,
   });
 
   @override
@@ -42,7 +42,7 @@ class StudySessionsChart extends StatelessWidget {
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: SizedBox(
-                width: sessionHours.length * 80,
+                width: sessionHours.length * 120,
                 child: BarChart(
                   BarChartData(
                     maxY: maxY,
@@ -112,7 +112,7 @@ class StudySessionsChart extends StatelessWidget {
                             barRods: [
                               BarChartRodData(
                                 toY: entry.value,
-                                width: 50,
+                                width: 70,
                                 color: Colors.tealAccent.shade400,
                                 borderRadius: BorderRadius.circular(4),
                               ),
